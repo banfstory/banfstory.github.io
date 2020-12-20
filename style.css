@@ -40,9 +40,8 @@ a {
 
 /* Header START */
 #header {
-	background: black;
+	background: transparent;
 	position: fixed;
-	color: white;
 	height: 8vh;
 	width: 100%;
 	z-index: 1;
@@ -53,6 +52,12 @@ a {
 	align-items: center;
 	justify-content: space-around;
 	height: 100%;
+}
+
+#header a {
+	font-size: 1.1rem;
+	font-weight: 600;
+	letter-spacing: .1rem;
 }
 
 #header .logo a {
@@ -72,6 +77,18 @@ a {
 
 #header .nav ul li a {
 	cursor: pointer;
+}
+
+#header .nav ul li a:hover {
+	color: #FF7F00;
+}
+
+.scrolled {
+	box-shadow: 0px 0px 10px #888888;
+}
+
+.scrolled a {
+	color: black;
 }
 
 /* Header END */
@@ -111,6 +128,8 @@ a {
 
 #hero .hero-text {
 	display: flex;
+	max-width: 600px;
+	margin: 0 auto;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
@@ -120,7 +139,7 @@ a {
 	margin-bottom: 1.5rem;
 }
 
-#hero .hero-text div {
+#hero .hero-text p {
 	line-height: 1.5rem;
 }
 
@@ -212,6 +231,7 @@ a {
 	cursor: pointer;
 	padding: 1rem;
 	font-size: 1.5rem;
+	text-align: center;
 	-webkit-transition: all 1s ease;
 	-moz-transition: all 1s ease;
 	-o-transition: all 1s ease;
@@ -236,7 +256,8 @@ a {
 
 #contact .contact-details {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
 	margin: 5rem 0;
 }
 
@@ -244,6 +265,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 1rem;
 	width: 32%;
 }
 
@@ -297,3 +319,30 @@ a {
 	margin-bottom: 2rem;
 }
 /* Footer END */
+
+/* MEDIA QUERIES START */
+/* TABLETS */
+@media (max-width: 991px) {
+
+}
+/* SMALLER TABLETS */
+@media (max-width: 767px) {
+	#skills .skill-item {
+		width: 48%;
+	}
+
+	#contact .contact-item {
+		width: 48%;
+	}
+}
+/* PHONE */
+@media (max-width: 575px) {
+	#skills .skill-item {
+		width: 98%;
+	}	
+
+	#contact .contact-item {
+		width: 98%;
+	}
+}
+/* MEDIA QUERIES END* /
