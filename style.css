@@ -1,0 +1,188 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", "Helvetica", "Sans-serif";
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.container {
+	display: flex;
+}
+
+/* Header START */
+#header {
+	background: black;
+	position: fixed;
+	color: white;
+	height: 8vh;
+	width: 100%;
+	z-index: 1;
+	padding: 1rem 0;
+}
+
+#header .container {
+	align-items: center;
+	justify-content: space-around;
+	height: 100%;
+}
+
+#header .logo a {
+	font-size: 1.5rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+#header .nav ul {
+	list-style-type: none;
+}
+
+#header .nav ul li {
+	display: inline-block;
+	margin: 0 1rem;
+}
+
+#header .nav ul li a {
+	cursor: pointer;
+}
+
+/* Header END */
+
+/* Hero START */
+#hero {
+	/*
+	Hero page reference link:
+	https://aicd.companydirectors.com.au/advocacy/governance-leadership-centre/external-environment/artificial-intelligence-profoundly-changing-the-business-landscape
+	*/
+	background-image: url(./img/hero.png);
+	height: 100vh;
+	background-size: cover;
+	background-position: left center;
+	position: relative;
+	z-index: 0;
+}
+
+#hero:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.6;
+	background-color: black;
+	z-index: -1;
+}
+
+#hero .container {
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+#hero .hero-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#hero .hero-text h1 {
+	margin-bottom: 1.5rem;
+}
+
+#hero .hero-text div {
+	line-height: 1.5rem;
+}
+
+#hero .hero-text a {
+	display: block;
+	color: white;
+	border: solid 1px white;
+	padding: 1rem;
+	font-size: 1.5rem;
+	margin-top: 3rem;
+	transition: 1s ease background-color, border;
+	letter-spacing: .1rem;
+	font-weight: 600;
+}
+
+#hero .hero-text a:hover {
+	background-color: #FF7F00;
+	border: solid 1px#FF7F00;
+}
+/* Hero END */
+
+/* Skills START */
+#skills .container {
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 5rem 0;
+	flex-direction: column;
+}
+
+#skills .all-skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 5rem 0; 
+}
+
+#skills .skill-item {
+	width: 23%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2rem 0;
+}
+
+#skills h2 {
+	text-align: center;
+	color:  #FF7F00;
+}
+
+#skills .skill-item > div {
+	font-size: 2.5rem;
+	margin-top: 1.5rem;
+	color: #fad6a5
+}
+
+#skills img {
+	transition: 1s ease transform;
+}
+
+#skills .skill-item:hover img {
+	transform: scale(1.2);
+}
+
+/* Skills END */
+
+/* Projects START */
+
+/* Projects END */
