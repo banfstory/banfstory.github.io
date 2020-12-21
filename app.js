@@ -54,7 +54,7 @@ $(function() {
 		let state = triggerScroll();
 		setClassScrolled(state);
 		let status = hamburger.hasClass('active');
-		if(!status) {
+		if(!status || $(window).width() > 991) {
 			setHeaderColor(state);
 		}
 	});
