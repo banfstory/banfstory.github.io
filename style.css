@@ -31,7 +31,6 @@ h4 {
 
 a {
 	text-decoration: none;
-	color: white;
 }
 
 .container {
@@ -55,40 +54,68 @@ a {
 }
 
 #header a {
-	font-size: 1.1rem;
 	font-weight: 600;
 	letter-spacing: .1rem;
 }
 
 #header .logo a {
+	color: white;
 	font-size: 1.5rem;
 	font-weight: 600;
 	cursor: pointer;
 }
 
-#header .nav ul {
+#header .nav-links ul {
 	list-style-type: none;
 }
 
-#header .nav ul li {
+#header .nav-links ul li {
 	display: inline-block;
 	margin: 0 1rem;
 }
 
-#header .nav ul li a {
+#header .nav-links ul li a {
+	font-size: 1.1rem;
+	color: white;
 	cursor: pointer;
 }
 
-#header .nav ul li a:hover {
+#header .nav-links.change ul li a {
+	color: black;
+}
+
+#header .nav-links ul li a:hover {
 	color: #FF7F00;
 }
 
-.scrolled {
+#header .nav-links.active ul li a:hover {
+	color: #FF7F00;
+}
+
+#header.scrolled {
+	background-color: white;
 	box-shadow: 0px 0px 10px #888888;
 }
 
-.scrolled a {
+#header.scrolled .logo a {
 	color: black;
+}
+
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	padding: 1rem;
+	cursor: pointer;
+	display: none;
+}
+
+#header .hamburger .strip {
+	height: 3px;
+	background-color: white;
+}
+
+#header .hamburger.change .strip {
+	background-color: black;
 }
 
 /* Header END */
@@ -323,7 +350,75 @@ a {
 /* MEDIA QUERIES START */
 /* TABLETS */
 @media (max-width: 991px) {
+	#header .hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
 
+	#header .hamburger.active div {
+		background-color: black;
+	}
+
+	#header .nav-links.active ul li a {
+		color: black;
+	}
+
+	#header .hamburger.active .strip:nth-of-type(2) {
+		display: none;
+	}
+
+	#header .hamburger.active .strip:nth-of-type(1)
+	{
+		width: 30px;
+		transform: rotate(45deg) translate(4px, 6px);
+	}
+
+	#header .hamburger.active .strip:nth-child(3) {
+		width: 30px;
+		transform: rotate(-45deg) translate(4px, -6px);
+	}
+
+	#header .container  {
+		justify-content: space-between;
+		padding: 0 1rem;
+	}
+
+	#header .nav-links {
+		position: fixed;
+		box-shadow: 0px 0px 10px #888888;
+		background-color: white;
+		padding: 1rem;
+		width: 30%;
+		height: 100%;
+		right: -100%;
+		top: 0;
+		z-index: -1;
+		-webkit-transition: right 1s ease;
+		-moz-transition: right 1s ease;
+		-o-transition: right 1s ease;
+	}
+
+	#header .nav-links ul {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#header .nav ul li {
+		display: block;
+		margin: 2rem 0;
+	}
+
+	#header .nav ul li a {
+		font-size: 1.3rem;
+	}
+
+	#header .nav-links.active {
+		right: 0;
+	}
 }
 /* SMALLER TABLETS */
 @media (max-width: 767px) {
