@@ -536,6 +536,10 @@ a {
 		width: 98%;
 	}
 	
+	#header .nav ul li a {
+		font-size: 0.9rem;
+	}
+
 	#projects .project-image img {
 		width: 375px;
 		height: 375px;
