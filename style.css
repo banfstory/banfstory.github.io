@@ -358,6 +358,7 @@ a {
 
 	#header .hamburger.active div {
 		background-color: black;
+		transition: all 0.8s ease;
 	}
 
 	#header .nav-links.active ul li a {
