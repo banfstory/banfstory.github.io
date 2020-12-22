@@ -274,6 +274,10 @@ a {
 /* About END */
 
 /* Contact START */
+#contact {
+	background: #f8f9fa;
+}
+
 #contact .container {
 	max-width: 1000px;
 	margin: 0 auto;
@@ -330,6 +334,86 @@ a {
 
 /* Projects START */
 
+#projects .container {
+	max-width: 1200px;
+	padding: 5rem 0;
+	margin: 0 auto;
+	flex-direction: column;
+}
+
+#projects .all-projects {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 3rem 0;
+}
+
+#projects .project-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 48%;
+}
+
+#projects .project-item h2 {
+	margin-bottom: 1rem;
+}
+
+#projects .project-image {
+	cursor: pointer;
+	position: relative;
+}
+
+#projects .project-content p {
+	margin: 0.5rem 0;
+	color: white;
+}
+
+#projects .project-content h2 {
+	color: white;
+}
+
+#projects .project-content a {
+	color:  #FF7F00;
+	margin-top: 1rem;
+	text-align: center;
+}
+
+#projects .project-content a:hover {
+	color: #fad6a5;
+}
+
+#projects .project-content {
+	-webkit-transition: all 2s ease;
+	-moz-transition: all 2s ease;
+	-o-transition: all 2s ease;
+}
+
+#projects .project-description {
+	padding: 1rem 4rem;
+	display: none;
+}
+
+#projects .project-image:hover .project-description {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#projects .project-image:hover .project-content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+	background-color: black;
+	opacity: .9;
+}
+
+#projects .project-item {
+	margin: 1rem 0;
+}
 /* Projects END */
 
 /* Footer START */
@@ -348,6 +432,13 @@ a {
 /* Footer END */
 
 /* MEDIA QUERIES START */
+/*DESKTOP*/
+@media (max-width: 1199px) {
+	#projects .project-item {
+		width: 98%;
+	}
+}
+
 /* TABLETS */
 @media (max-width: 991px) {
 	#header .hamburger {
@@ -358,7 +449,9 @@ a {
 
 	#header .hamburger.active div {
 		background-color: black;
-		transition: all 0.8s ease;
+		-webkit-transition: all 0.8s ease;
+		-moz-transition: all 0.8s ease;
+		-o-transition: all 0.8s ease;
 	}
 
 	#header .nav-links.active ul li a {
@@ -421,6 +514,7 @@ a {
 		right: 0;
 	}
 }
+
 /* SMALLER TABLETS */
 @media (max-width: 767px) {
 	#skills .skill-item {
@@ -431,6 +525,7 @@ a {
 		width: 48%;
 	}
 }
+
 /* PHONE */
 @media (max-width: 575px) {
 	#skills .skill-item {
@@ -439,6 +534,30 @@ a {
 
 	#contact .contact-item {
 		width: 98%;
+	}
+	
+	#projects .project-image img {
+		width: 375px;
+		height: 375px;
+	}
+
+	#projects .project-content p {
+		margin: 0.3rem 0;
+		font-size: 0.8rem;
+	}
+	
+	#projects .project-content h2 {
+		font-size: 1.5rem;
+	}
+	
+	#projects .project-content a {
+		font-size: 0.9rem;
+		margin-top: 0.5rem;
+	}
+
+	#projects .project-description {
+		padding: 0.5rem 2rem;
+		display: none;
 	}
 }
 /* MEDIA QUERIES END* /
