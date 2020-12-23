@@ -358,6 +358,11 @@ a {
 	margin-bottom: 1rem;
 }
 
+#projects .hover-detail {
+	text-align: center;
+	margin-top: 2rem;
+}
+
 #projects .project-image {
 	cursor: pointer;
 	position: relative;
