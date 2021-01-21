@@ -6,7 +6,7 @@ $(function() {
 	// determine if changes to the header is required or not by returning true or false
 	function triggerScroll() {
 		let position = window.scrollY;
- 		if(position > 100) {
+ 		if(position > 0) {
 			return true;
 		} else {
 			return false;
