@@ -67,6 +67,10 @@ a {
 	}
 	
 	.nav-links {
+		&.change a:hover {
+			color: $dark-orange;
+		}
+
 		ul {
 			list-style-type: none;
 
