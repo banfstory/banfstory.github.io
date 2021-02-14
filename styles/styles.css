@@ -290,7 +290,7 @@ a {
   line-height: 2rem;
 }
 
-#about a {
+#about .container > a {
   display: block;
   color: black;
   border: solid 1px black;
@@ -305,7 +305,7 @@ a {
   font-weight: 600;
 }
 
-#about a:hover {
+#about .container > a:hover {
   background-color: #FF7F00;
   border: solid 1px #FF7F00;
   color: white;
