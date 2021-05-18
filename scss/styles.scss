@@ -589,5 +589,19 @@ a {
 			display: none;
 		}
 	}
+
+	#hero {
+		.hero-text {
+			margin: 0 0.5rem;
+		}
+	}
+
+	#about {
+		.about-content {
+			p {
+				margin: 0 1rem;
+			}
+		}
+	}
 }
 
