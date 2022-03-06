@@ -38,7 +38,7 @@ h2 {
 
 h3 {
 	font-size: 1.3rem;
-	color: $medium-orange;
+	color: $light-orange;
 }
 
 h4 {
@@ -118,9 +118,9 @@ a {
 				cursor: pointer;
 				background-color: $medium-orange;
 				border: solid 1px $medium-orange;
-				transition: all 1s ease;
+				transition: background-color 1s ease, border 1s ease;
 				padding: 0.75rem;
-				font-size: 1.5rem;
+				font-size: 1.2rem;
 				margin-top: 2rem;
 				font-weight: 600;
 
@@ -324,7 +324,7 @@ a {
 			padding: 1rem;
 			font-size: 1.5rem;
 			margin-top: 3rem;
-			transition: all 1s ease;
+			transition: background-color 1s ease, border 1s ease;
 			letter-spacing: .1rem;
 			font-weight: 600;
 

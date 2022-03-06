@@ -37,7 +37,7 @@ h2 {
 
 h3 {
   font-size: 1.3rem;
-  color: #FFA500;
+  color: #fad6a5;
 }
 
 h4 {
@@ -141,10 +141,10 @@ a {
   cursor: pointer;
   background-color: #FFA500;
   border: solid 1px #FFA500;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: background-color 1s ease, border 1s ease;
+  transition: background-color 1s ease, border 1s ease;
   padding: 0.75rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-top: 2rem;
   font-weight: 600;
 }
@@ -373,8 +373,8 @@ a {
   padding: 1rem;
   font-size: 1.5rem;
   margin-top: 3rem;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: background-color 1s ease, border 1s ease;
+  transition: background-color 1s ease, border 1s ease;
   letter-spacing: .1rem;
   font-weight: 600;
 }
