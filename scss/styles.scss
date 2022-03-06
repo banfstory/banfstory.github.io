@@ -38,7 +38,7 @@ h2 {
 
 h3 {
 	font-size: 1.3rem;
-	color: $light-orange;
+	color: $medium-orange;
 }
 
 h4 {
@@ -76,6 +76,7 @@ a {
 		background-color: white;
 		width: 700px;
 		padding: 1.5rem;
+		margin: 0 1rem;
 		display: flex;
 		justify-content: center;
 
@@ -118,7 +119,7 @@ a {
 				background-color: $medium-orange;
 				border: solid 1px $medium-orange;
 				transition: all 1s ease;
-				padding: 1rem;
+				padding: 0.75rem;
 				font-size: 1.5rem;
 				margin-top: 2rem;
 				font-weight: 600;
@@ -315,7 +316,7 @@ a {
 			line-height: 1.5rem;
 		}
 		
-		button {
+		.contact-me-btn {
 			color: white;
 			background-color: transparent;
 			cursor: pointer;
@@ -876,6 +877,20 @@ a {
 	#header {
 		.container  {
 			padding: 0 1rem;
+		}
+	}
+
+	#contact-me {
+		.container {	
+			.contact-me-form {
+				.user-details {
+					flex-direction: column;
+					
+					input {
+						width: 100%;
+					}
+				}
+			}
 		}
 	}
 }

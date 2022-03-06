@@ -37,7 +37,7 @@ h2 {
 
 h3 {
   font-size: 1.3rem;
-  color: #fad6a5;
+  color: #FFA500;
 }
 
 h4 {
@@ -84,6 +84,7 @@ a {
   background-color: white;
   width: 700px;
   padding: 1.5rem;
+  margin: 0 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,7 +143,7 @@ a {
   border: solid 1px #FFA500;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
-  padding: 1rem;
+  padding: 0.75rem;
   font-size: 1.5rem;
   margin-top: 2rem;
   font-weight: 600;
@@ -364,7 +365,7 @@ a {
   line-height: 1.5rem;
 }
 
-#hero .hero-text button {
+#hero .hero-text .contact-me-btn {
   color: white;
   background-color: transparent;
   cursor: pointer;
@@ -378,7 +379,7 @@ a {
   font-weight: 600;
 }
 
-#hero .hero-text button:hover {
+#hero .hero-text .contact-me-btn:hover {
   background-color: #FF7F00;
   border: solid 1px #FF7F00;
 }
@@ -992,6 +993,15 @@ a {
   }
   #header .container {
     padding: 0 1rem;
+  }
+  #contact-me .container .contact-me-form .user-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact-me .container .contact-me-form .user-details input {
+    width: 100%;
   }
 }
 

@@ -16,7 +16,7 @@ $(function() {
 	// set header class to scrolled which allows for changes to logo name color and background color of navigation
 	function setClassScrolled(state) {
 		if(state) {
-			header.addClass('scrolled'); 
+			header.addClass('scrolled');
 		} else {
 			header.removeClass('scrolled');
 		}
@@ -115,5 +115,6 @@ contactMeBtn.onclick = () => {
 
 contactMeCloseBtn.onclick = () => {
 	contactMe.classList.add('hidden');
-	body.classList.remove('unscrollable')
+	body.classList.remove('unscrollable');
 }
+
