@@ -58,6 +58,46 @@ a {
   overflow: hidden;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 /* Contact me START */
 #contact-me {
   position: fixed;
@@ -74,10 +114,18 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  visibility: hidden;
 }
 
-#contact-me.hidden {
-  display: none;
+#contact-me.fade-in {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+#contact-me.fade-out {
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
 }
 
 #contact-me .container {

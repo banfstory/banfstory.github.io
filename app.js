@@ -109,12 +109,14 @@ showHideBtn.onclick = () => {
 }
 
 contactMeBtn.onclick = () => {
-	contactMe.classList.remove('hidden');
+	contactMe.classList.add('fade-in');
+	contactMe.classList.remove('fade-out');
 	body.classList.add('unscrollable')
 }
 
 contactMeCloseBtn.onclick = () => {
-	contactMe.classList.add('hidden');
+	contactMe.classList.remove('fade-in');
+	contactMe.classList.add('fade-out');
 	body.classList.remove('unscrollable');
 }
 
