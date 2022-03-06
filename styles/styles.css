@@ -54,6 +54,119 @@ a {
   display: flex;
 }
 
+.unscrollable {
+  overflow: hidden;
+}
+
+/* Contact me START */
+#contact-me {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact-me.hidden {
+  display: none;
+}
+
+#contact-me .container {
+  background-color: white;
+  width: 700px;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact-me .container .contact-me-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+#contact-me .container .contact-me-form h2 {
+  margin-bottom: 2rem;
+}
+
+#contact-me .container .contact-me-form .user-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact-me .container .contact-me-form .user-details input {
+  width: 49%;
+}
+
+#contact-me .container .contact-me-form input, #contact-me .container .contact-me-form textarea, #contact-me .container .contact-me-form button {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  outline: none;
+}
+
+#contact-me .container .contact-me-form input {
+  height: 3rem;
+}
+
+#contact-me .container .contact-me-form textarea {
+  resize: none;
+}
+
+#contact-me .container .contact-me-form button {
+  color: white;
+  cursor: pointer;
+  background-color: #FFA500;
+  border: solid 1px #FFA500;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+#contact-me .container .contact-me-form button:hover {
+  background-color: #FF7F00;
+  border: solid 1px #FF7F00;
+}
+
+#contact-me .container .contact-me-form .close {
+  color: #999494;
+  font-size: 40px;
+  line-height: 20px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
+}
+
+#contact-me .container .contact-me-form .close:hover {
+  color: #858181;
+}
+
+/* Contact me END */
 /* Header START */
 #header {
   background: transparent;
@@ -251,9 +364,10 @@ a {
   line-height: 1.5rem;
 }
 
-#hero .hero-text a {
-  display: block;
+#hero .hero-text button {
   color: white;
+  background-color: transparent;
+  cursor: pointer;
   border: solid 1px white;
   padding: 1rem;
   font-size: 1.5rem;
@@ -264,7 +378,7 @@ a {
   font-weight: 600;
 }
 
-#hero .hero-text a:hover {
+#hero .hero-text button:hover {
   background-color: #FF7F00;
   border: solid 1px #FF7F00;
 }

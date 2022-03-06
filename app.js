@@ -75,12 +75,16 @@ $(function() {
 	defaultChange();
 });
 
+let body = document.getElementsByTagName('body')[0];
 let skillShowHide = document.getElementsByClassName('show-hide-all')[0];
 let showHideBtn = skillShowHide.getElementsByTagName('button')[0];
 let circleGrow = skillShowHide.getElementsByClassName('circle-grow')[0];
 let skills = document.getElementById('skills');
 let skillItems = skills.getElementsByClassName('skill-items');
 let skillsHeader = skills.getElementsByTagName('h2')[0];
+let contactMe = document.getElementById('contact-me');
+let contactMeBtn = document.getElementsByClassName('contact-me-btn')[0];
+let contactMeCloseBtn = contactMe.getElementsByClassName('close')[0];
 
 showHideBtn.onmouseover = () => {
 	circleGrow.classList.add('scale-up');
@@ -92,7 +96,7 @@ showHideBtn.onmouseleave = () => {
 	skillsHeader.classList.remove('change-heading-color');
 }
 
-showHideBtn.onclick = (e) => {
+showHideBtn.onclick = () => {
 	if(skills.classList.contains("show-all")) {
 		skills.classList.remove("show-all");
 		showHideBtn.innerHTML = "SHOW MORE";
@@ -104,3 +108,12 @@ showHideBtn.onclick = (e) => {
 	}
 }
 
+contactMeBtn.onclick = () => {
+	contactMe.classList.remove('hidden');
+	body.classList.add('unscrollable')
+}
+
+contactMeCloseBtn.onclick = () => {
+	contactMe.classList.add('hidden');
+	body.classList.remove('unscrollable')
+}
