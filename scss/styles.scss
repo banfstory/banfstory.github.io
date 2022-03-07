@@ -91,16 +91,26 @@ a {
 			flex-direction: column;
 			width: 100%;
 
+			.form-field {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 1rem;
+
+				label {
+					font-size: 0.95rem;
+				}
+			}
+
 			h2 {
 				margin-top: 1rem;
-				margin-bottom: 2rem;
+				margin-bottom: 3rem;
 			}
 
 			.user-details {
 				display: flex;
 				justify-content: space-between;
 
-				input {
+				.form-field {
 					width: 49%;
 				}
 			}
@@ -108,7 +118,7 @@ a {
 			input, textarea, button {
 				width: 100%;
 				margin: 0.5rem 0;
-				padding: 0.5rem 1rem;
+				padding: 0.5rem 0.75rem;
 				outline:none;
 			}
 
@@ -877,7 +887,7 @@ a {
 				.user-details {
 					flex-direction: column;
 					
-					input {
+					.form-field {
 						width: 100%;
 					}
 				}
