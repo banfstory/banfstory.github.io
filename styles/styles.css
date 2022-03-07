@@ -58,46 +58,6 @@ a {
   overflow: hidden;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
 /* Contact me START */
 #contact-me {
   position: fixed;
@@ -119,13 +79,13 @@ a {
 
 #contact-me.fade-in {
   visibility: visible;
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
+  -webkit-animation: fadeInOpacity 1s;
+          animation: fadeInOpacity 1s;
 }
 
 #contact-me.fade-out {
-  -webkit-animation: fadeOut 1s;
-          animation: fadeOut 1s;
+  -webkit-animation: fadeOutOpacity 1s;
+          animation: fadeOutOpacity 1s;
 }
 
 #contact-me .container {
@@ -453,6 +413,20 @@ a {
   overflow: hidden;
 }
 
+#skills.hide-items .container .all-skills .skill-item.hide1 {
+  -webkit-animation: fadeOutScale 1s;
+          animation: fadeOutScale 1s;
+}
+
+#skills.show-items .container .all-skills .skill-item.hide1 {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  position: relative;
+  visibility: visible;
+  -webkit-animation: fadeInScale 1s;
+          animation: fadeInScale 1s;
+}
+
 #skills .container {
   width: 100%;
   -webkit-box-orient: vertical;
@@ -495,8 +469,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin: 1.5rem 0;
-  -webkit-transition: 1s ease transform;
-  transition: 1s ease transform;
 }
 
 #skills .container .all-skills .skill-item.hide1 {
@@ -979,12 +951,6 @@ a {
   #skills .container .all-skills .skill-item {
     width: 48%;
   }
-  #skills .container .all-skills .skill-item.hide2 {
-    visibility: hidden;
-    position: absolute;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
   #contact .contact-item {
     width: 48%;
   }
@@ -1073,10 +1039,95 @@ a {
   }
 }
 
-#skills.show-all .container .all-skills .skill-item {
-  visibility: visible;
-  position: relative;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+@-webkit-keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOutOpacity {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOutOpacity {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes fadeInScale {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes fadeOutScale {
+  from {
+    position: relative;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    visibility: visible;
+  }
+  to {
+    position: relative;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOutScale {
+  from {
+    position: relative;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    visibility: visible;
+  }
+  to {
+    position: relative;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    visibility: hidden;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

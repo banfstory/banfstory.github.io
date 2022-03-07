@@ -57,27 +57,6 @@ a {
 	overflow: hidden;
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes fadeOut {
-	from {
-		opacity: 1;
-		visibility: visible;
-	}
-	to {
-		opacity: 0;
-		visibility: hidden;
-	}
-}
-
-
 /* Contact me START */
 #contact-me {
 	position: fixed;
@@ -92,11 +71,11 @@ a {
 
 	&.fade-in {
 		visibility: visible;
-		animation: fadeIn 1s;
+		animation: fadeInOpacity 1s;
 	}
 
 	&.fade-out {
-		animation: fadeOut 1s;
+		animation: fadeOutOpacity 1s;
 	}
 
 	.container {
@@ -374,6 +353,17 @@ a {
 	padding: 3.5rem 0;
 	overflow: hidden;
 
+	&.hide-items .container .all-skills .skill-item.hide1 {
+		animation: fadeOutScale 1s;
+	}
+
+	&.show-items .container .all-skills .skill-item.hide1 {
+		transform: scale(1);
+		position: relative;
+		visibility: visible;
+		animation: fadeInScale 1s;
+	}
+
 	.container {
 		width: 100%;
 		flex-direction: column;
@@ -398,7 +388,6 @@ a {
 				flex-direction: column;
 				align-items: center;
 				margin: 1.5rem 0;
-				transition: 1s ease transform;
 
 				&.hide1 {
 					visibility: hidden;
@@ -793,26 +782,12 @@ a {
 
 /* SMALLER TABLETS */
 @media screen and (max-width: 767px) {
-	#skills {
-		.container {
-			.all-skills {
-				.skill-item {
-					width: 48%;
-
-					&.hide2 {
-						visibility: hidden;
-						position: absolute;
-						transform: scale(0);
-					}
-				}
-			}
-		}
+	#skills .container .all-skills .skill-item {
+		width: 48%;
 	}
 
-	#contact {
-		.contact-item {
-			width: 48%;
-		}
+	#contact .contact-item {
+		width: 48%;
 	}
 }
 
@@ -848,16 +823,12 @@ a {
 		}
 	}
 
-	#contact {
-		.contact-item {
-			width: 98%;
-		}
+	#contact .contact-item {
+		width: 98%;
 	}
 
-	#header {
-		.nav ul li a {
-			font-size: 0.9rem;
-		}	
+	#header .nav ul li a {
+		font-size: 0.9rem;
 	}
 
 	#projects {
@@ -888,24 +859,16 @@ a {
 		}
 	}
 
-	#hero {
-		.hero-text {
-			margin: 0 0.5rem;
-		}
+	#hero .hero-text {
+		margin: 0 0.5rem;
 	}
 
-	#about {
-		.about-content {
-			p {
-				margin: 0 1rem;
-			}
-		}
+	#about .about-content p {
+		margin: 0 1rem;
 	}
 
-	#header {
-		.container  {
-			padding: 0 1rem;
-		}
+	#header .container  {
+		padding: 0 1rem;
 	}
 
 	#contact-me {
@@ -949,9 +912,46 @@ a {
 	}
 }
 
-#skills.show-all .container .all-skills .skill-item {
-	visibility: visible;
-	position: relative;
-	transform: scale(1);
+@keyframes fadeInOpacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
+
+@keyframes fadeOutOpacity {
+	from {
+		opacity: 1;
+		visibility: visible;
+	}
+	to {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes fadeInScale {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeOutScale {
+	from {
+		position: relative;
+		transform: scale(1);
+		visibility: visible;
+	}
+	to {
+		position: relative;
+		transform: scale(0);
+		visibility: hidden;
+	}
+}
+
 

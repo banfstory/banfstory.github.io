@@ -97,14 +97,14 @@ showHideBtn.onmouseleave = () => {
 }
 
 showHideBtn.onclick = () => {
-	if(skills.classList.contains("show-all")) {
-		skills.classList.remove("show-all");
+	if(skills.classList.contains("show-items")) {
+		skills.classList.remove("show-items");
+		skills.classList.add("hide-items");
 		showHideBtn.innerHTML = "SHOW MORE";
-		skills.scrollIntoView(true);
 	} else {
-		skills.classList.add("show-all");
+		skills.classList.add("show-items");
+		skills.classList.remove("hide-items");
 		showHideBtn.innerHTML = "SHOW LESS";
-		skills.scrollIntoView(true);
 	}
 }
 
