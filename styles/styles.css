@@ -403,9 +403,35 @@ a {
   font-weight: 600;
 }
 
+#hero .hero-text .contact-me-btn i {
+  display: none;
+}
+
 #hero .hero-text .contact-me-btn:hover {
   background-color: #FF7F00;
   border: solid 1px #FF7F00;
+}
+
+#hero .hero-text .contact-me-btn.morph-button {
+  background-color: #FF7F00;
+  border: solid 1px #FF7F00;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+  padding: 1rem;
+  -webkit-animation: morph 1s;
+          animation: morph 1s;
+  z-index: 500;
+}
+
+#hero .hero-text .contact-me-btn.morph-button span {
+  display: none;
+}
+
+#hero .hero-text .contact-me-btn.morph-button i {
+  display: block;
 }
 
 /* Hero END */
@@ -734,6 +760,7 @@ a {
 #projects .project-image {
   cursor: pointer;
   position: relative;
+  z-index: -1;
 }
 
 #projects .project-image:hover .project-description {
@@ -1151,6 +1178,28 @@ a {
     -webkit-transform: scale(0);
             transform: scale(0);
     visibility: hidden;
+  }
+}
+
+@-webkit-keyframes morph {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes morph {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 /*# sourceMappingURL=styles.css.map */

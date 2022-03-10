@@ -85,6 +85,7 @@ let skillsHeader = skills.getElementsByTagName('h2')[0];
 let contactMe = document.getElementById('contact-me');
 let contactMeBtn = document.getElementsByClassName('contact-me-btn')[0];
 let contactMeCloseBtn = contactMe.getElementsByClassName('close')[0];
+let hero = document.getElementById('hero');
 
 showHideBtn.onmouseover = () => {
 	circleGrow.classList.add('scale-up');
@@ -120,3 +121,11 @@ contactMeCloseBtn.onclick = () => {
 	body.classList.remove('unscrollable');
 }
 
+window.onscroll = () => {
+	const rect = hero.getBoundingClientRect();
+	if(rect.bottom <= 0) {
+		contactMeBtn.classList.add('morph-button');
+	} else {
+		contactMeBtn.classList.remove('morph-button');
+	}
+}

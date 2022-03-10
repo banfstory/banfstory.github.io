@@ -345,13 +345,39 @@ a {
 			letter-spacing: .1rem;
 			font-weight: 600;
 
+			i {
+				display: none;	
+			}
+
 			&:hover {
 				background-color: $dark-orange;
 				border: solid 1px $dark-orange;
 			}
+
+			&.morph-button {
+				background-color: $dark-orange;
+				border: solid 1px $dark-orange;
+				border-radius: 50%;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				margin: 2rem;
+				padding: 1rem;
+				animation: morph 1s;
+				z-index: 500;
+				
+				span {
+					display: none;
+				}
+	
+				i {
+					display: block;
+				}
+			}
 		}
 	}
 }
+
 /* Hero END */
 
 /* Skills START */
@@ -597,6 +623,7 @@ a {
 	.project-image {
 		cursor: pointer;
 		position: relative;
+		z-index: -1;
 
 		&:hover {
 			.project-description {
@@ -974,4 +1001,11 @@ a {
 	}
 }
 
-
+@keyframes morph {
+	from {
+		transform: scale(0);
+	} 
+	to {
+		transform: scale(1);
+	}
+}
