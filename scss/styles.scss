@@ -353,30 +353,58 @@ a {
 				background-color: $dark-orange;
 				border: solid 1px $dark-orange;
 			}
-
-			&.morph-button {
-				background-color: $dark-orange;
-				border: solid 1px $dark-orange;
-				border-radius: 50%;
-				position: fixed;
-				bottom: 0;
-				right: 0;
-				margin: 2rem;
-				padding: 1rem;
-				animation: morph 1s;
-				z-index: 500;
-				
-				span {
-					display: none;
-				}
-	
-				i {
-					display: block;
-				}
-			}
 		}
 	}
 }
+
+// CONTACT ME ICON BUTTON START
+#contact-me-icon {
+	background-color: $dark-orange;
+	border: solid 1px $dark-orange;
+	color: white;
+	cursor: pointer;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 2rem;
+	padding: 1rem;
+	z-index: 100;
+	font-size: 1.5rem;
+	transform: scale(0);
+
+	i {
+		display: block;
+	}
+
+	&.contact-show-btn {
+		animation: showContactBtn 1s;
+		transform: scale(1);
+	}
+
+	&.contact-hide-btn {
+		animation: hideContactBtn 1s;
+	}
+}
+
+@keyframes showContactBtn {
+	from {
+		transform: scale(0);
+	} 
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes hideContactBtn {
+	from {
+		transform: scale(1);
+	} 
+	to {
+		transform: scale(0);
+	}
+}
+// CONTACT ME ICON BUTTON END
 
 /* Hero END */
 
@@ -1001,11 +1029,5 @@ a {
 	}
 }
 
-@keyframes morph {
-	from {
-		transform: scale(0);
-	} 
-	to {
-		transform: scale(1);
-	}
-}
+
+

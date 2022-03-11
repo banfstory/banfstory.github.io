@@ -412,26 +412,81 @@ a {
   border: solid 1px #FF7F00;
 }
 
-#hero .hero-text .contact-me-btn.morph-button {
+#contact-me-icon {
   background-color: #FF7F00;
   border: solid 1px #FF7F00;
+  color: white;
+  cursor: pointer;
   border-radius: 50%;
   position: fixed;
   bottom: 0;
   right: 0;
   margin: 2rem;
   padding: 1rem;
-  -webkit-animation: morph 1s;
-          animation: morph 1s;
-  z-index: 500;
+  z-index: 100;
+  font-size: 1.5rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
-#hero .hero-text .contact-me-btn.morph-button span {
-  display: none;
-}
-
-#hero .hero-text .contact-me-btn.morph-button i {
+#contact-me-icon i {
   display: block;
+}
+
+#contact-me-icon.contact-show-btn {
+  -webkit-animation: showContactBtn 1s;
+          animation: showContactBtn 1s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#contact-me-icon.contact-hide-btn {
+  -webkit-animation: hideContactBtn 1s;
+          animation: hideContactBtn 1s;
+}
+
+@-webkit-keyframes showContactBtn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes showContactBtn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes hideContactBtn {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes hideContactBtn {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
 }
 
 /* Hero END */
@@ -1178,28 +1233,6 @@ a {
     -webkit-transform: scale(0);
             transform: scale(0);
     visibility: hidden;
-  }
-}
-
-@-webkit-keyframes morph {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes morph {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 /*# sourceMappingURL=styles.css.map */

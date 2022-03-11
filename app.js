@@ -85,6 +85,7 @@ let skillsHeader = skills.getElementsByTagName('h2')[0];
 let contactMe = document.getElementById('contact-me');
 let contactMeBtn = document.getElementsByClassName('contact-me-btn')[0];
 let contactMeCloseBtn = contactMe.getElementsByClassName('close')[0];
+let contactMeIconBtn = document.getElementById('contact-me-icon');
 let hero = document.getElementById('hero');
 
 showHideBtn.onmouseover = () => {
@@ -110,22 +111,40 @@ showHideBtn.onclick = () => {
 }
 
 contactMeBtn.onclick = () => {
+	contactMeShow();
+}
+
+contactMeCloseBtn.onclick = () => {
+	contactMeHide();
+}
+
+contactMeIconBtn.onclick = () => {
+	contactMeShow();
+}
+
+function contactMeShow() {
 	contactMe.classList.add('fade-in');
 	contactMe.classList.remove('fade-out');
 	body.classList.add('unscrollable')
 }
 
-contactMeCloseBtn.onclick = () => {
+function contactMeHide() {
 	contactMe.classList.remove('fade-in');
 	contactMe.classList.add('fade-out');
 	body.classList.remove('unscrollable');
 }
 
+
+
 window.onscroll = () => {
 	const rect = hero.getBoundingClientRect();
 	if(rect.bottom <= 0) {
-		contactMeBtn.classList.add('morph-button');
+		contactMeIconBtn.classList.add('contact-show-btn');
+		contactMeIconBtn.classList.remove('contact-hide-btn');
 	} else {
-		contactMeBtn.classList.remove('morph-button');
+		if(contactMeIconBtn.classList.contains('contact-show-btn')) {
+			contactMeIconBtn.classList.remove('contact-show-btn');
+			contactMeIconBtn.classList.add('contact-hide-btn');
+		}
 	}
 }
