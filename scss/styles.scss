@@ -771,17 +771,11 @@ a {
 
 				.strip {
 					&:nth-of-type(1) {
-						width: 30px;
-						transform: rotate(45deg) translate(4px, 5px);
-					}
-
-					&:nth-of-type(2) {
 						display: none;
 					}
 
 					&:nth-child(3) {
-						width: 30px;
-						transform: rotate(-45deg) translate(4px, -6px);
+						display: none;
 					}
 				}
 
