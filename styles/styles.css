@@ -1167,8 +1167,20 @@ a {
 }
 
 @media screen and (max-width: 400px) {
+  p {
+    font-size: 0.9rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
   h2 {
     font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  #hero .hero-text .contact-me-btn {
+    font-size: 1.3rem;
   }
   #projects .all-projects h2 {
     font-size: 1rem;
@@ -1182,6 +1194,33 @@ a {
   #projects .all-projects img {
     width: 300px;
     height: 300px;
+  }
+  #header .logo a {
+    font-size: 1.3rem;
+  }
+  #header .hamburger {
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+  }
+  #about .container > a {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  #contact-me .container {
+    padding: 1rem;
+  }
+  #contact-me .container .contact-me-form h2 {
+    margin-bottom: 1rem;
+  }
+  #contact-me .container .contact-me-form button {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+  }
+  #contact-me .container .contact-me-form .form-field {
+    margin-bottom: 0.5rem;
   }
 }
 
