@@ -431,6 +431,8 @@ a {
 
 #contact-me-icon i {
   display: block;
+  -webkit-animation: tiltPhoneIcon 3s linear infinite;
+          animation: tiltPhoneIcon 3s linear infinite;
 }
 
 #contact-me-icon.contact-show-btn {
@@ -443,6 +445,52 @@ a {
 #contact-me-icon.contact-hide-btn {
   -webkit-animation: hideContactBtn 1s;
           animation: hideContactBtn 1s;
+}
+
+@-webkit-keyframes tiltPhoneIcon {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  20% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  40% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes tiltPhoneIcon {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  20% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  30% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  40% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
 }
 
 @-webkit-keyframes showContactBtn {
