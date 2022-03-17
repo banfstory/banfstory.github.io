@@ -721,7 +721,6 @@ a {
 
 #about .about-links {
   font-size: 4rem;
-  cursor: pointer;
   margin: 3rem 0;
   width: 300px;
   display: -webkit-box;
@@ -729,6 +728,10 @@ a {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+#about .about-links a {
+  cursor: pointer;
 }
 
 #about .about-links a.linkedin-icon {
