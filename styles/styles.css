@@ -626,7 +626,7 @@ a {
   margin-top: 1.5rem;
 }
 
-#skills .container .all-skills .skill-item:hover img {
+#skills .container .all-skills .skill-item img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
