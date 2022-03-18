@@ -566,17 +566,34 @@ a {
 		margin: 3rem 0;
 		width: 300px;
 		display: flex;
-		justify-content: space-around;
+		flex-direction: column;
 
-		a {
-			cursor: pointer;
+		h3 {
+			margin-bottom: 1.5rem;
+		}
 
-			&.linkedin-icon {
-				color: #2867B2
-			}
-	
-			&.github-icon {
-				color: #171515;
+		.social-links {
+			display: flex;
+			justify-content: space-around;
+
+			a {
+				cursor: pointer;
+
+				i {
+					transition: color ease 1s;
+
+					&:hover {
+						color: $dark-orange;
+					}
+				}
+			
+				&.linkedin-icon {
+					color: #2867B2
+				}
+		
+				&.github-icon {
+					color: #171515;
+				}
 			}
 		}
 	}
@@ -692,7 +709,6 @@ a {
 	}
 
 	.project-image {
-		cursor: pointer;
 		position: relative;
 		z-index: 1;
 
