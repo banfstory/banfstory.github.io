@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles/styles.css" type="text/css" rel="Stylesheet" />
+  <!-- Used this link to get the icons: https://icons8.com/ -->
+  <!-- Website icon reference link: https://img.icons8.com/ios-filled/50/4a90e2/portfolio.png -->
+  <link rel="icon" href="img/portfolio.png">
+  <!--Used this link to get the icons: https://fontawesome.com/ -->
+  <link rel="stylesheet" href="fontawesome-free-6.1.0-web/css/all.css">
+  <title>Denis Ng - Portfolio Website</title>
+</head>
+<body>
+  <!-- Form is sent to email through this API: https://formsubmit.co/ -->
+  <div id="contact-me">
+    <div class="container">
+      <form class="contact-me-form" action="https://formsubmit.co/denis_chi_yiu@hotmail.com" method="POST">
+        <div class="close">&times;</div>
+        <h2>CONTACT ME</h2>
+        <div class="user-details">
+          <div class="form-field">
+            <label for="contact-me-name">Full Name</label>
+            <input type="text" name="name" id="contact-me-name" required>
+          </div>
+          <div class="form-field">
+            <label for="contact-me-email">Email Address</label>
+            <input type="text" name="email" id="contact-me-email" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="contact-me-subject">Subject</label>
+          <input type="text" name="_subject" id="contact-me-subject" required>
+        </div>
+        <div class="form-field">
+          <label for="contact-me-message">Message</label>
+          <textarea name="message" rows="10" id="contact-me-message" required></textarea>
+        </div>
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+  </div>
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#hero">DENIS NG</a>
+      </div>
+      <div class="nav">
+        <div class="hamburger">
+          <div class="bars">
+            <div class="strip"></div>
+            <div class="strip"></div>
+            <div class="strip"></div>
+          </div>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#hero">HOME</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="hero">
+    <div class="container">
+      <div class="hero-text">
+        <h1>Denis Ng - Portfolio</h1>
+        <p>The website aims to deliver information about my skillsets/knowledge and some of my personal projects.</p>
+        <button class="contact-me-btn">CONTACT ME</button>
+      </div>
+    </div>
+  </section>
+  <section id="skills">
+    <div class="container">
+      <h2>PROGRAMMING SKILLS</h2>
+      <div class="all-skills">
+        <!--Used this link to get the images for the frameworks and programming languages: https://devicon.dev/ -->
+        <div class="skill-item">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg-->
+          <img src="svg/flask-original.svg" height="100px" width="100px">
+          <h3>Flask</h3>
+        </div>
+        <div class="skill-item">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg-->
+          <img src="svg/vuejs-original.svg" height="100px" width="100px"/>
+          <h3>Vuejs</h3>
+        </div>
+        <div class="skill-item">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg-->
+          <img src="svg/django-plain.svg" height="100px" width="100px"/>
+          <h3>Django</h3>
+        </div>
+        <div class="skill-item">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg-->
+          <img src="svg/react-original.svg" height="100px" width="100px"/>
+          <h3>Reactjs</h3>
+        </div>
+        <div class="skill-item">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg-->
+          <img src="svg/csharp-original.svg" height="100px" width="100px"/>
+          <h3>C#</h3>
+        </div>
+        <div class="skill-item">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg-->
+          <img src="svg/python-original.svg" height="100px" width="100px"/>
+          <h3>Python</h3>
+        </div>
+        <div class="skill-item">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg-->
+          <img src="svg/javascript-original.svg" height="100px" width="100px"/>
+          <h3>Javascript</h3>
+        </div>
+        <div class="skill-item">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg-->
+          <img src="svg/mysql-original.svg" height="100px" width="100px" />
+          <h3>MySQL</h3>
+        </div>
+        <div class="skill-item hide1">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg-->
+          <img src="svg/nodejs-plain.svg" height="100px" width="100px"/>
+          <h3>Nodejs</h3>
+        </div>
+        <div class="skill-item hide1">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg-->
+          <img src="svg/html5-original-wordmark.svg" height="100px" width="100px"/>
+          <h3>HTML</h3>
+        </div>
+        <div class="skill-item hide1">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg-->
+          <img src="svg/css3-original-wordmark.svg" height="100px" width="100px"/>
+          <h3>CSS</h3>
+        </div>
+        <div class="skill-item hide1">
+          <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg-->
+          <img src="svg/selenium-original.svg" height="100px" width="100px"/>
+          <h3>Selenium</h3>
+        </div>
+      </div>
+    </div>
+    <div class="show-hide-all">
+      <button>SHOW MORE</button>
+      <div class="circle-grow"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>ABOUT ME</h2>
+      <div class="about-content">
+        <h3>Hello, I'm a Programmer</h3>
+        <p>I have skills/knowledge ranging from web application development, desktop application development, data analytics, relational databases, game development, AI and machine learning.</p>
+     </div>
+     <div class="about-links">
+       <h3>My Social Links</h3>
+       <div class="social-links">
+        <a href="https://linkedin.com/in/denis-ng-25b3a5205" target="_blank" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/banfstory" target="_blank" class="github-icon"><i class="fa-brands fa-github"></i></a>
+       </div>
+     </div>
+     <div class="degree">
+      <p><i>Degree in Science in Information Technology</i></p>
+      <p><i>Double Majoring in Information Systems Management and Computer Networking</i></p>
+      <p><i>University of Technology, Sydney</i></p>
+     </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>PERSONAL PROJECTS</h2>
+      <div class="hover-detail">Hover over image to view more details about the project</div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-image">
+            <div class="project-content">
+              <div class="project-description">
+                <h2>Flask Forum</h2>
+                <p>This website is built using frontend and backend technologies, the website allows users to create their own forums which gives a place for other users to create posts for that particular forum 
+                  as well as allowing users to make commments to posts and make replys to comments.</p>
+                <p>The website is a Single Page Website (SPA) built using React and Vue for the frontend and Flask for the REST API backend which ensures quicker load times as only certain components of the page
+                  is updated. </p>
+                  <a href="https://react-forum-live.vercel.app/"target="_blank">Link to React website</a>
+                  <a href="https://github.com/banfstory/React-Forum-Frontend" target="_blank">Link to Github React Forum website source code</a>
+              </div>
+            </div>
+            <img src="./img/flaskforum.png" height="500px" width="500px">
+          </div>
+        </div>
+        <div class="project-item"> 
+          <div class="project-image">
+            <div class="project-content">
+              <div class="project-description">
+                <h2>Chess Game</h2>
+                <p>The chess game is built in C# with the .NET framework (Windows Forms App), the game allows a player to verse another player or a player to verse an AI with varying levels of difficulty.</p>
+                <p>The chess AI uses the Minimax Algorithm that takes into consideration the best scenarios that is made for both the player and AI in order to make the best choice possible.</p>
+                <p> For the AI to make the best move, it needs to look at all the different moves that can be made using DFS where the difficulty of the AI is determined by how deep the tree 
+                  goes, it also uses Backtracking in order compare node’s materials as it works it way up the tree.</p>
+                <a href="https://github.com/banfstory/Chess-Complete" target="_blank">Link to Github source code</a>
+              </div>
+            </div>
+            <img src="./img/chess-complete.PNG" height="500px" width="500px">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-image">
+            <div class="project-content">
+              <div class="project-description">
+                <h2>Machine Learning Models From Scartch</h2>
+                <p>This project involves several machine learning models that were coded from scartch, these include:</p>
+                <ul>
+                  <li>Linear Regression</li>
+                  <li>Logistic Regression</li>
+                  <li>K-Nearest Neighbors</li>
+                  <li>K-Means Clustering</li>
+                  <li>Neural Network</li>
+                  <li>Gaussian Naive Bayes</li>
+                  <li>Multinomial Naive Bayes</li>
+                </ul>
+                <a href="https://github.com/banfstory/Machine-Learning-Models-From-Scartch" target="_blank">Link to Github source code</a>
+              </div>
+            </div>
+            <img src="./img/logistic-regression-model.png" height="500px" width="500px">
+          </div>
+        </div>
+        <div class="project-item"> 
+          <div class="project-image">
+            <div class="project-content">
+              <div class="project-description">
+                <h2>Human Resource System</h2>
+                <p>The HR App is built in C# with the .NET framework (Windows Forms App), the app keeps track of employee, department, management, salary details and its associations with each other.</p>
+                <p>In order to manage the data of this application, it uses MySQL to query its relational database.</p>
+                <a href="https://github.com/banfstory/HR-System" target="_blank">Link to Github source code</a>
+              </div>            
+            </div>
+            <img src="./img/HRSystem.png" height="500px" width="500px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>CONTACT INFO</h2>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-logo"><i class="fas fa-envelope"></i></div>
+          <h3>Email</h3>
+          <div>denis_chi_yiu@hotmail.com</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-logo"><i class="fas fa-mobile"></i></div>
+          <h3>Phone</h3>
+          <div>0404440737</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-logo"><i class="fas fa-map"></i></div>
+          <h3>Location</h3>
+          <div>Australia, Sydney</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="container">
+      <div>Denis Ng</div>
+      <p>Copyright © 2025 All rights reserved </p>
+    </div>
+  </section>
+  <button id="contact-me-icon">
+    <i class="fa fa-phone"></i>
+  </button>
+  <script src="./app.js"></script>
+</body>
+</html>
