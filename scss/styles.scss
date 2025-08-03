@@ -1,0 +1,1194 @@
+@import './colorScheme';
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@600;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", "Helvetica", "Sans-serif";
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+h1, h2, h3 {
+	font-family: 'Spline Sans', sans-serif;
+}
+
+h2, h3 {
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 2rem;
+	color:   $dark-orange;
+}
+
+h3 {
+	font-size: 1.3rem;
+	color: $light-orange;
+}
+
+h4 {
+	font-size: 1.2rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	display: flex;
+}
+
+.unscrollable {
+	overflow: hidden;
+}
+
+/* Contact me START */
+#contact-me {
+	position: fixed;
+	background-color: rgba(0,0,0,.9);
+	z-index: 200;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+
+	&.fade-in {
+		visibility: visible;
+		animation: fadeInOpacity 1s;
+	}
+
+	&.fade-out {
+		animation: fadeOutOpacity 1s;
+	}
+
+	.container {
+		background-color: white;
+		width: 700px;
+		padding: 1.5rem;
+		margin: 0 1rem;
+		display: flex;
+		justify-content: center;
+
+		.contact-me-form {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			.form-field {
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 1rem;
+
+				label {
+					font-size: 0.95rem;
+				}
+			}
+
+			h2 {
+				margin-top: 1rem;
+				margin-bottom: 3rem;
+			}
+
+			.user-details {
+				display: flex;
+				justify-content: space-between;
+
+				.form-field {
+					width: 49%;
+				}
+			}
+
+			input, textarea, button {
+				width: 100%;
+				margin: 0.5rem 0;
+				padding: 0.5rem 0.75rem;
+				outline:none;
+			}
+
+			input {
+				height: 3rem;
+			}
+
+			textarea {
+				resize: none;
+			}
+
+			button {
+				color: white;
+				cursor: pointer;
+				background-color: $medium-orange;
+				border: solid 1px $medium-orange;
+				transition: background-color 1s ease, border 1s ease;
+				padding: 0.75rem;
+				font-size: 1.2rem;
+				margin-top: 2rem;
+				font-weight: 600;
+
+				&:hover {
+					background-color: $dark-orange;
+					border: solid 1px $dark-orange;
+				}
+			}
+			
+			.close {
+				color: #999494;
+				font-size: 40px;
+				line-height: 20px;
+				align-self: flex-end;
+				cursor: pointer;
+
+				&:hover {
+					color: #858181;
+				}
+			}
+		}
+	}
+}
+/* Contact me END */
+
+/* Header START */
+#header {
+	background: transparent;
+	opacity: 0.98;
+	position: fixed;
+	height: 9vh;
+	width: 100%;
+	z-index: 100;
+	padding: 1rem 0;
+	transition: background-color 0.75s ease, color 0.75s ease, height 1s ease;
+
+	.container {
+		align-items: center;
+		justify-content: space-around;
+		height: 100%;
+	}
+
+	a {
+		font-weight: 600;
+		letter-spacing: .1rem;
+	}
+
+	.logo a {
+		color: white;
+		font-size: 1.5rem;
+		font-weight: 600;
+		cursor: pointer;
+	}
+	
+	.nav-links {
+		&.change a:hover {
+			color: $dark-orange;
+		}
+
+		ul {
+			list-style-type: none;
+
+			li {
+				display: inline-block;
+				margin: 0 1rem;
+
+				a {
+					font-size: 1.1rem;
+					color: white;
+					cursor: pointer;
+
+					&:hover {
+						color: $dark-orange;
+					}
+				}
+			}
+		}
+
+		&.change ul li a {
+			color: black;
+		}
+
+		&.active ul li a:hover {
+			color: $dark-orange;
+		}
+	}
+
+	&.scrolled {
+		background-color: white;
+		box-shadow: $header-shadow;
+		height: 10vh;
+		
+		.hamburger:after{
+			border: 2px solid black;
+		}
+
+		.logo a {
+			color: black;
+		}
+	}
+
+	.hamburger {
+		height: 45px;
+		width: 45px;
+		cursor: pointer;
+		border-radius: 50%;
+		border: 2px solid white;
+		position: relative;
+		display: none;
+		justify-content: center;
+		align-items: center;
+
+		.bars {
+			width: 100%;
+			height: 100%;
+			padding: 0.5rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+
+			.strip {
+				height: 3px;
+				background-color: white;
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			border: 2px solid white;
+			animation: hamburger-beacon 1s linear infinite;
+		}
+
+		&.change {
+			border: 2px solid black;
+			
+			.strip {
+				background-color: black;
+			}
+		}
+	}
+}
+/* Header END */
+
+/* Hero START */
+#hero {
+	/*
+	Hero page background-image reference link:
+	https://negativespace.co/abstract-laser-background/
+	*/
+	background-image: url(../img/negative-space-abstract-chaotic-colors-6.jpg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	z-index: 0;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.6;
+		background-color: black;
+		z-index: -1;
+	}
+
+	.container {
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		color: white;
+	}
+
+	.hero-text {
+		display: flex;
+		max-width: 600px;
+		margin: 0 auto;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		h1 {
+			margin-bottom: 1.5rem;
+		}
+
+		p {
+			line-height: 1.5rem;
+		}
+		
+		.contact-me-btn {
+			color: white;
+			background-color: transparent;
+			cursor: pointer;
+			border: solid 1px white;
+			padding: 1rem;
+			font-size: 1.5rem;
+			margin-top: 3rem;
+			transition: background-color 1s ease, border 1s ease;
+			letter-spacing: .1rem;
+			font-weight: 600;
+
+			i {
+				display: none;	
+			}
+
+			&:hover {
+				background-color: $dark-orange;
+				border: solid 1px $dark-orange;
+			}
+		}
+	}
+}
+
+// CONTACT ME ICON BUTTON START
+#contact-me-icon {
+	background-color: $dark-orange;
+	border: solid 1px white;
+	color: white;
+	cursor: pointer;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 2rem;
+	padding: 1rem;
+	z-index: 50;
+	font-size: 1.5rem;
+	transform: scale(0);
+
+	i {
+		display: block;
+		animation: tiltPhoneIcon 3s linear infinite;
+	}
+
+	&.contact-show-btn {
+		animation: showContactBtn 1s;
+		transform: scale(1);
+	}
+
+	&.contact-hide-btn {
+		animation: hideContactBtn 1s;
+	}
+}
+
+@keyframes tiltPhoneIcon {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(-15deg);
+	}
+	20% {
+		transform: rotate(0deg);
+	}
+	30% {
+		transform: rotate(15deg);
+	}
+	40% {
+		transform: rotate(0);
+	}
+}
+
+@keyframes showContactBtn {
+	from {
+		transform: scale(0);
+	} 
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes hideContactBtn {
+	from {
+		transform: scale(1);
+	} 
+	to {
+		transform: scale(0);
+	}
+}
+// CONTACT ME ICON BUTTON END
+
+/* Hero END */
+
+/* Skills START */
+#skills {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3.5rem 0;
+	overflow: hidden;
+
+	&.hide-items .container .all-skills .skill-item.hide1 {
+		animation: fadeOutScale 1s;
+	}
+
+	&.show-items .container .all-skills .skill-item.hide1 {
+		transform: scale(1);
+		position: relative;
+		visibility: visible;
+		animation: fadeInScale 1s;
+	}
+
+	.container {
+		width: 100%;
+		flex-direction: column;
+
+		h2 {
+			transition: 1s ease color;
+			
+			&.change-heading-color {
+				color: white;
+			}
+		}
+
+		.all-skills {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 3rem 0;
+
+			.skill-item {
+				width: 23%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin: 2rem 0;
+
+				&.hide1 {
+					visibility: hidden;
+					position: absolute;
+					transform: scale(0);
+				}
+
+				> h3 {
+					margin-top: 1.5rem;
+				}
+
+				img:hover {
+					transform: scale(1.2);
+				}
+			}
+
+			img {
+				transition: 1s ease transform;
+			}
+		}
+	}
+
+	.show-hide-all {
+		width: 130px;
+		height: 130px;
+		align-self: center;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.circle-grow, button {
+			background-color: #FF7F00;
+			border-radius: 50%;
+		}
+
+		button {
+			width: 100%;
+			height: 100%;
+			color: white;
+			border: solid 3px white;
+			font-size: 1rem;
+			cursor: pointer;
+			position: absolute;
+			font-weight: 600;
+			z-index: 1;
+		}
+
+		.circle-grow {
+			width: 105%;
+			height: 105%;
+			position: absolute;
+			z-index: -1;
+			transition: transform 2s ease;
+
+			&.scale-up {
+				transform: scale(30);
+			}
+		}
+	}
+}
+/* Skills END */
+
+/* About START */
+
+#about {
+	background: #f8f9fa;
+
+	.container {
+		flex-direction: column;
+		align-items: center;
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 5rem 1rem;
+	}
+
+	.about-content {
+		margin: 2rem 0;
+
+		h3 {
+			color: black;
+			margin: 1.5rem 0;
+		}
+
+		p {
+			text-align: center;
+			line-height: 2rem;
+		}
+	}
+
+	div.degree {
+		margin: 0rem 10rem;
+		text-align: center;
+		line-height: 2rem;
+	}
+
+	.about-links {
+		font-size: 4rem;
+		margin: 3rem 0;
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+
+		h3 {
+			margin-bottom: 1.5rem;
+		}
+
+		.social-links {
+			display: flex;
+			justify-content: space-around;
+
+			a {
+				cursor: pointer;
+
+				i {
+					transition: color ease 1s;
+
+					&:hover {
+						color: $dark-orange;
+					}
+				}
+			
+				&.linkedin-icon {
+					color: #2867B2
+				}
+		
+				&.github-icon {
+					color: #171515;
+				}
+			}
+		}
+	}
+
+	.container > a {
+		display: block;
+		color: black;
+		border: solid 1px black;
+		cursor: pointer;
+		padding: 1rem;
+		font-size: 1.5rem;
+		text-align: center;
+		transition: all 1s ease;
+		letter-spacing: .1rem;
+		font-weight: 600;
+
+		&:hover {
+			background-color: $dark-orange;
+			border: solid 1px $dark-orange;
+			color: white;
+		}
+	}
+}
+/* About END */
+
+/* Contact START */
+#contact {
+	background: #f8f9fa;
+
+	.container {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 5rem 0;
+		flex-direction: column;
+	}
+
+	.contact-details {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 5rem 0;
+	}
+
+	.contact-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1rem;
+		width: 32%;
+
+		> h3 {
+			margin: 0.5rem 0;
+		}		
+
+		div:nth-of-type(2) {
+			margin: 0.5rem 0;
+		}
+	}
+
+	.contact-logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		background-color: #D3D3D3;
+
+		i {
+			font-size: 3rem;
+			color: white;
+			transition: all 0.6s ease;
+		}
+
+		&:hover i {
+			transform: scale(1.4);
+			color: $dark-orange;
+		}
+	}
+}
+/* Contact END */
+
+/* Projects START */
+#projects {
+	.container {
+		max-width: 1200px;
+		padding: 5rem 0;
+		margin: 0 auto;
+		flex-direction: column;
+	}
+
+	.all-projects {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 3rem 0;
+	}
+
+	.project-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 48%;
+		margin: 1rem 0;
+
+		h2 {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.hover-detail {
+		text-align: center;
+		margin-top: 2rem;
+	}
+
+	.project-image {
+		position: relative;
+		z-index: 1;
+
+		&:hover {
+			.project-description {
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.project-content {
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				z-index: 0;
+				background-color: black;
+				opacity: .9;
+			}
+		}
+	}
+
+	.project-content {
+		transition: all 2s ease;
+
+		p {
+			margin: 0.5rem 0;
+			color: white;
+		}
+
+		h2 {
+			color: white;
+		}
+
+		a {
+			color:  $dark-orange;
+			margin-top: 1rem;
+			text-align: center;
+
+			&:hover {
+				color: $light-orange;
+			}
+		}
+
+		ul {
+			padding: 1rem;
+			li {
+				color: white;
+			}
+		}
+	}
+
+	.project-description {
+		padding: 1rem 4rem;
+		display: none;
+	}
+}
+/* Projects END */
+
+/* Footer START */
+#footer {
+	.container {
+		flex-direction: column;
+		align-items: center;
+		background: #333;
+		color: white;
+		padding: 3rem 0;
+
+		div {
+			font-size: 1.8rem;
+			margin-bottom: 2rem;
+		}
+	}
+}
+/* Footer END */
+
+/* Hamburger Beacon effect */
+@keyframes hamburger-beacon {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.4);
+		opacity: 0;
+	}
+}
+
+/* MEDIA QUERIES */
+/* DESKTOP */
+@media screen and (max-width: 1199px) {
+	#projects {
+		.project-item {
+				width: 98%;
+		}
+	}
+}
+
+@keyframes circle-growth {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(30);
+	}
+}
+
+/* TABLETS */
+@media screen and (max-width: 991px) {
+	#header {
+		.hamburger {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+
+			&.active {
+				div {
+					transition: all 0.8s ease;
+				}
+
+				&:after {
+					border: 2px solid black;
+				}
+
+				.strip {
+					&:nth-of-type(1) {
+						display: none;
+					}
+
+					&:nth-child(3) {
+						display: none;
+					}
+				}
+
+				border: 2px solid black;
+				
+				.strip {
+					background-color: black;
+				}
+			}
+		}
+
+		.nav-links {
+			position: fixed;
+			box-shadow: $header-shadow;
+			background-color: white;
+			padding: 1rem;
+			width: 30%;
+			height: 100%;
+			right: -100%;
+			top: 0;
+			z-index: -1;
+			opacity: 0.5;
+			transition: right 2s ease, opacity 1.5s ease;
+
+			&:hover {
+				opacity: 0.98;
+			}
+
+			ul {
+				display: flex;
+				height: 100%;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			&.active {
+				right: 0;
+
+				ul li a {
+					color: black;
+				}
+			}
+		}
+
+		.container  {
+			justify-content: space-between;
+			padding: 0 3rem;
+		}
+
+		.nav {
+			ul li {
+				display: block;
+				margin: 2rem 0;
+
+				a {
+					font-size: 1.3rem;
+				}
+			}
+		}
+	}
+
+	#about {
+		div.degree {
+			margin: 0rem 8rem;
+		}
+	}
+}
+
+/* SMALLER TABLETS */
+@media screen and (max-width: 767px) {
+	#skills .container .all-skills .skill-item {
+		width: 48%;
+	}
+
+	#contact .contact-item {
+		width: 48%;
+	}
+
+	#about {
+		div.degree {
+			margin: 0rem 6rem;
+		}
+	}
+}
+
+/* PHONE */
+@media screen and (max-width: 575px) {
+	h2 {
+		font-size: 1.7rem;
+	}
+
+	#skills {
+		.container {
+			.all-skills {
+				.skill-item {
+					img {
+						width: 80px;
+						height: 80px;
+					}
+
+					h3 {
+						font-size: 1rem;
+					}
+				}
+			}
+		}
+
+		.show-hide-all {
+			width: 115px;
+			height: 115px;
+
+			button {
+				font-size: 0.9rem;
+			}
+		}
+	}
+
+	#contact {
+		.contact-item {
+			width: 98%;
+		}
+	}
+
+	#header .nav ul li a {
+		font-size: 0.9rem;
+	}
+
+	#projects {
+		.project-image img {
+			width: 375px;
+			height: 375px;
+		}
+
+		.project-content {
+			p {
+				margin: 0.3rem 0;
+				font-size: 0.8rem;
+			}
+
+			li {
+				font-size: 0.8rem;
+			}
+
+			h2 {
+				font-size: 1.5rem;
+			}
+
+			a {
+				font-size: 0.9rem;
+				margin-top: 0.5rem;
+			}
+		}
+
+		.project-description {
+			padding: 0.5rem 2rem;
+			display: none;
+		}
+	}
+
+	#hero .hero-text {
+		margin: 0 0.5rem;
+	}
+
+	#about {
+		.about-content p {
+			margin: 0 1rem;
+		}
+	
+		div.degree {
+			margin: 0rem 2rem;
+		}
+	}
+	#header .container  {
+		padding: 0 1rem;
+	}
+
+	#contact-me {
+		.container {	
+			.contact-me-form {
+				.user-details {
+					flex-direction: column;
+					
+					.form-field {
+						width: 100%;
+						margin-bottom: 0.5rem;
+					}
+				}
+			
+				h2 {
+					margin-top: 0.5rem;
+					margin-bottom: 1.5rem;
+				}
+
+				button {
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 400px) {
+	p {
+		font-size: 0.9rem;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+
+	h3 {
+		font-size: 1.2rem;
+	}
+
+	#hero .hero-text .contact-me-btn {
+		font-size: 1.3rem;
+	}
+
+	#projects .all-projects {
+		h2 {
+			font-size: 0.9rem;
+		}
+
+		p {
+			font-size: 0.6rem;
+		}
+
+		li {
+			font-size: 0.6rem;
+		}
+		
+		a {
+			font-size: 0.6rem;
+		}
+
+		img {
+			width: 300px;
+			height: 300px;
+		}
+	}
+
+	#header {
+		.logo a {
+			font-size: 1.3rem;
+		}
+
+		.hamburger {
+			height: 40px;
+    		width: 40px;
+			border: 1px solid white;
+		}
+	}
+
+	#about .container > a {
+		font-size: 1.3rem;
+	}
+
+	#about {
+		.about-links {
+			font-size: 3.5rem;
+			margin: 2rem 0;
+			width: 200px;
+		}
+
+		div.degree {
+			margin: 0rem 1rem;
+		}	
+	}
+}
+
+@media screen and (max-height: 700px) {
+	#contact-me {
+		.container {
+			padding: 1rem;
+
+			.contact-me-form {
+				h2 {
+    				margin-bottom: 1rem;
+				}
+
+				button {
+					margin-top: 0.5rem;
+					padding: 0.5rem;
+				}
+
+				.form-field {
+					margin-bottom: 0.5rem;
+				}
+			}
+		}
+	}
+}
+
+@keyframes fadeInOpacity {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOutOpacity {
+	from {
+		opacity: 1;
+		visibility: visible;
+	}
+	to {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes fadeInScale {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeOutScale {
+	from {
+		position: relative;
+		transform: scale(1);
+		visibility: visible;
+	}
+	to {
+		position: relative;
+		transform: scale(0);
+		visibility: hidden;
+	}
+}
+
+
+
