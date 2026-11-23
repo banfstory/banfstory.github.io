@@ -9,44 +9,51 @@
   <link rel="icon" href="img/portfolio.png">
   <!--Used this link to get the icons: https://fontawesome.com/ -->
   <link rel="stylesheet" href="fontawesome-free-6.1.0-web/css/all.css">
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MPJBM74G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <script src="./analytics/interactions.js"></script>
   <title>Denis Ng - Portfolio</title>
 </head>
 <body>
   <!-- Form is sent to email through this API: https://formsubmit.co/ -->
-  <div id="contact-me">
+  <div id="contact-me" data-tracking-group="contact_modal">
     <div class="container">
-      <form class="contact-me-form" action="https://formsubmit.co/denis_chi_yiu@hotmail.com" method="POST">
-        <div class="close">&times;</div>
+      <form class="contact-me-form" action="https://formsubmit.co/denis_chi_yiu@hotmail.com" method="POST" data-tracking-subgroup="contact_form">
+        <div class="close" data-tracking-name="close_contact_modal" data-tracking-type="button">&times;</div>
         <h2>CONTACT ME</h2>
         <div class="user-details">
           <div class="form-field">
             <label for="contact-me-name">Full Name</label>
-            <input type="text" name="name" id="contact-me-name" required>
+            <input type="text" name="name" id="contact-me-name" required data-tracking-name="contact_name" data-tracking-type="text_input" data-capture-value="false">
           </div>
           <div class="form-field">
             <label for="contact-me-email">Email Address</label>
-            <input type="text" name="email" id="contact-me-email" required>
+            <input type="text" name="email" id="contact-me-email" required data-tracking-name="contact_email" data-tracking-type="email_input" data-capture-value="false">
           </div>
         </div>
         <div class="form-field">
           <label for="contact-me-subject">Subject</label>
-          <input type="text" name="_subject" id="contact-me-subject" required>
+          <input type="text" name="_subject" id="contact-me-subject" required data-tracking-name="contact_subject" data-tracking-type="text_input" data-capture-value="false">
         </div>
         <div class="form-field">
           <label for="contact-me-message">Message</label>
-          <textarea name="message" rows="10" id="contact-me-message" required></textarea>
+          <textarea name="message" rows="10" id="contact-me-message" required data-tracking-name="contact_message" data-tracking-type="textarea" data-capture-value="false"></textarea>
         </div>
-        <button type="submit">SEND MESSAGE</button>
+        <button type="submit" data-tracking-name="send_message_submit" data-tracking-type="submit_button">SEND MESSAGE</button>
       </form>
     </div>
   </div>
-  <header id="header">
+  <header id="header" data-tracking-group="header">
     <div class="container">
-      <div class="logo">
-        <a href="#hero">DENIS NG</a>
+      <div class="logo" data-tracking-subgroup="brand">
+        <a href="#hero" data-tracking-name="brand_logo" data-tracking-type="nav_link" data-tracking-url="#hero">DENIS NG</a>
       </div>
-      <div class="nav">
-        <div class="hamburger">
+      <div class="nav" data-tracking-subgroup="navigation">
+        <div class="hamburger" data-tracking-name="mobile_menu_toggle" data-tracking-type="button">
           <div class="bars">
             <div class="strip"></div>
             <div class="strip"></div>
@@ -55,110 +62,110 @@
         </div>
         <div class="nav-links">
           <ul>
-            <li><a href="#hero">HOME</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#hero" data-tracking-name="nav_home" data-tracking-type="nav_link" data-tracking-url="#hero">HOME</a></li>
+            <li><a href="#skills" data-tracking-name="nav_skills" data-tracking-type="nav_link" data-tracking-url="#skills">SKILLS</a></li>
+            <li><a href="#projects" data-tracking-name="nav_projects" data-tracking-type="nav_link" data-tracking-url="#projects">PROJECTS</a></li>
+            <li><a href="#about" data-tracking-name="nav_about" data-tracking-type="nav_link" data-tracking-url="#about">ABOUT</a></li>
+            <li><a href="#contact" data-tracking-name="nav_contact" data-tracking-type="nav_link" data-tracking-url="#contact">CONTACT</a></li>
           </ul>
         </div>
       </div>
     </div>
   </header>
-  <section id="hero">
+  <section id="hero" data-tracking-group="hero">
     <div class="container">
       <div class="hero-text">
         <h1>Denis Ng - Portfolio</h1>
         <p>Welcome to my portfolio website! Here, you'll find a showcase of my skills, knowledge, and personal projects that highlight my abilities and passion for technology.</p>
-        <button class="contact-me-btn">CONTACT ME</button>
+        <button class="contact-me-btn" data-tracking-name="hero_contact_me" data-tracking-type="button">CONTACT ME</button>
       </div>
     </div>
   </section>
-  <section id="skills">
+  <section id="skills" data-tracking-group="skills">
     <div class="container">
       <h2>PROGRAMMING SKILLS</h2>
-      <div class="all-skills">
+      <div class="all-skills" data-tracking-subgroup="skill_grid">
         <!--Used this link to get the images for the frameworks and programming languages: https://devicon.dev/ -->
-        <div class="skill-item">
+        <div class="skill-item" data-tracking-name="skill_flask" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg-->
           <img src="svg/flask-original.svg" height="100px" width="100px">
           <h3>Flask</h3>
         </div>
-        <div class="skill-item">
+        <div class="skill-item" data-tracking-name="skill_vuejs" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg-->
           <img src="svg/vuejs-original.svg" height="100px" width="100px"/>
           <h3>Vuejs</h3>
         </div>
-        <div class="skill-item">
+        <div class="skill-item" data-tracking-name="skill_django" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg-->
           <img src="svg/django-plain.svg" height="100px" width="100px"/>
           <h3>Django</h3>
         </div>
-        <div class="skill-item">
+        <div class="skill-item" data-tracking-name="skill_reactjs" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg-->
           <img src="svg/react-original.svg" height="100px" width="100px"/>
           <h3>Reactjs</h3>
         </div>
-        <div class="skill-item">
+        <div class="skill-item" data-tracking-name="skill_csharp" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg-->
           <img src="svg/csharp-original.svg" height="100px" width="100px"/>
           <h3>C#</h3>
         </div>
-        <div class="skill-item">
+        <div class="skill-item" data-tracking-name="skill_python" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg-->
           <img src="svg/python-original.svg" height="100px" width="100px"/>
           <h3>Python</h3>
         </div>
-        <div class="skill-item">
+        <div class="skill-item" data-tracking-name="skill_javascript" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg-->
           <img src="svg/javascript-original.svg" height="100px" width="100px"/>
           <h3>Javascript</h3>
         </div>
-        <div class="skill-item">
+        <div class="skill-item" data-tracking-name="skill_mysql" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg-->
           <img src="svg/mysql-original.svg" height="100px" width="100px" />
           <h3>MySQL</h3>
         </div>
-        <div class="skill-item hide1">
+        <div class="skill-item hide1" data-tracking-name="skill_nodejs" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg-->
           <img src="svg/nodejs-plain.svg" height="100px" width="100px"/>
           <h3>Nodejs</h3>
         </div>
-        <div class="skill-item hide1">
+        <div class="skill-item hide1" data-tracking-name="skill_html" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg-->
           <img src="svg/html5-original-wordmark.svg" height="100px" width="100px"/>
           <h3>HTML</h3>
         </div>
-        <div class="skill-item hide1">
+        <div class="skill-item hide1" data-tracking-name="skill_css" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg-->
           <img src="svg/css3-original-wordmark.svg" height="100px" width="100px"/>
           <h3>CSS</h3>
         </div>
-        <div class="skill-item hide1">
+        <div class="skill-item hide1" data-tracking-name="skill_selenium" data-tracking-type="skill_card">
           <!--https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg-->
           <img src="svg/selenium-original.svg" height="100px" width="100px"/>
           <h3>Selenium</h3>
         </div>
       </div>
     </div>
-    <div class="show-hide-all">
-      <button>SHOW MORE</button>
+    <div class="show-hide-all" data-tracking-subgroup="skills_toggle">
+      <button data-tracking-name="skills_show_more" data-tracking-type="button">SHOW MORE</button>
       <div class="circle-grow"></div>
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" data-tracking-group="about">
     <div class="container">
       <h2>ABOUT ME</h2>
       <div class="about-content">
         <h3>Hello, I'm a Programmer</h3>
         <p>I bring a diverse skill set encompassing web and desktop application development, algorithms and data structures, data analytics, relational database management, game development, and artificial intelligence/machine learning. Professionally, I have experience working with digital personalization tools such as Adobe Analytics and Adobe Experience Platform (AEP).</p>
      </div>
-     <div class="about-links">
+     <div class="about-links" data-tracking-subgroup="social_links">
        <h3>My Social Links</h3>
        <div class="social-links">
-        <a href="https://linkedin.com/in/denis-ng-25b3a5205" target="_blank" class="linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="https://github.com/banfstory" target="_blank" class="github-icon"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/denis-ng-25b3a5205" target="_blank" class="linkedin-icon" data-tracking-name="social_linkedin" data-tracking-type="outbound_link" data-tracking-url="https://linkedin.com/in/denis-ng-25b3a5205"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/banfstory" target="_blank" class="github-icon" data-tracking-name="social_github" data-tracking-type="outbound_link" data-tracking-url="https://github.com/banfstory"><i class="fa-brands fa-github"></i></a>
        </div>
      </div>
      <div class="degree">
@@ -169,26 +176,26 @@
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-tracking-group="projects">
     <div class="container">
       <h2>PERSONAL PROJECTS</h2>
       <div class="hover-detail">Hover over image to view more details about the project</div>
-      <div class="all-projects">
-        <div class="project-item">
+      <div class="all-projects" data-tracking-subgroup="project_list">
+        <div class="project-item" data-tracking-subgroup="project_flask_forum">
           <div class="project-image">
             <div class="project-content">
               <div class="project-description">
                 <h2>Flask Forum</h2>
                 <p>The website is built using both frontend and backend technologies. It allows users to create their own forums, where other users can create posts from existing forums, add comments to posts, and reply to comments that facilitates in open and dynamic conversations.</p>
                 <p>The application is a Single Page Application (SPA) developed using React and Vue as it's frontend, with a Flask-based REST API powering it's backend. This architecture ensures faster load times by dynamically updating specific components of the page instead of reloading the entire page.</p>
-                <a href="https://react-forum-live.vercel.app/"target="_blank">Link to React website</a>
-                <a href="https://github.com/banfstory/React-Forum-Frontend" target="_blank">Link to Github React Forum website source code</a>
+                <a href="https://react-forum-live.vercel.app/"target="_blank" data-tracking-name="flask_forum_live_demo" data-tracking-type="project_link" data-tracking-url="https://react-forum-live.vercel.app/">Link to React website</a>
+                <a href="https://github.com/banfstory/React-Forum-Frontend" target="_blank" data-tracking-name="flask_forum_github" data-tracking-type="project_link" data-tracking-url="https://github.com/banfstory/React-Forum-Frontend">Link to Github React Forum website source code</a>
               </div>
             </div>
             <img src="./img/flaskforum.png" height="500px" width="500px">
           </div>
         </div>
-        <div class="project-item"> 
+        <div class="project-item" data-tracking-subgroup="project_chess_game"> 
           <div class="project-image">
             <div class="project-content">
               <div class="project-description">
@@ -197,13 +204,13 @@
                 <p>The AI is powered by the Minimax algorithm, a recursive decision-making strategy. It evaluates all possible future moves and their outcomes, allowing AI to choose the move that offers the most strategic advantage. This is done by recursively traversing the game tree and backtracking where each node compares the values of its child nodes to select the most favorable outcome.</p>
                 <p>The evaluation is based on a material scoring system, where each chess piece is assigned a specific point value.</p>
                 </p>
-                <a href="https://github.com/banfstory/Chess-Complete" target="_blank">Link to Github source code</a>
+                <a href="https://github.com/banfstory/Chess-Complete" target="_blank" data-tracking-name="chess_game_github" data-tracking-type="project_link" data-tracking-url="https://github.com/banfstory/Chess-Complete">Link to Github source code</a>
               </div>
             </div>
             <img src="./img/chess-complete.PNG" height="500px" width="500px">
           </div>
         </div>
-        <div class="project-item">
+        <div class="project-item" data-tracking-subgroup="project_ml_models">
           <div class="project-image">
             <div class="project-content">
               <div class="project-description">
@@ -218,20 +225,20 @@
                   <li>Gaussian Naive Bayes</li>
                   <li>Multinomial Naive Bayes</li>
                 </ul>
-                <a href="https://github.com/banfstory/Machine-Learning-Models-From-Scartch" target="_blank">Link to Github source code</a>
+                <a href="https://github.com/banfstory/Machine-Learning-Models-From-Scartch" target="_blank" data-tracking-name="ml_models_github" data-tracking-type="project_link" data-tracking-url="https://github.com/banfstory/Machine-Learning-Models-From-Scartch">Link to Github source code</a>
               </div>
             </div>
             <img src="./img/logistic-regression-model.png" height="500px" width="500px">
           </div>
         </div>
-        <div class="project-item"> 
+        <div class="project-item" data-tracking-subgroup="project_hr_system"> 
           <div class="project-image">
             <div class="project-content">
               <div class="project-description">
                 <h2>Human Resource System</h2>
                 <p>The HR App is developed in C# using the .NET framework as a Window Forms Application. It manages various aspects of HR operations, including employees records, departments, management hierarchies, salary information, and their interrelationships.</p>
                 <p>The application uses a MySQL relational database to store and retrieve data through structured queries, ensuring reliable and efficient data management.</p>
-                <a href="https://github.com/banfstory/HR-System" target="_blank">Link to Github source code</a>
+                <a href="https://github.com/banfstory/HR-System" target="_blank" data-tracking-name="hr_system_github" data-tracking-type="project_link" data-tracking-url="https://github.com/banfstory/HR-System">Link to Github source code</a>
               </div>            
             </div>
             <img src="./img/HRSystem.png" height="500px" width="500px">
@@ -241,21 +248,21 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-tracking-group="contact_info">
     <div class="container">
       <h2>CONTACT INFO</h2>
-      <div class="contact-details">
-        <div class="contact-item">
+      <div class="contact-details" data-tracking-subgroup="contact_cards">
+        <div class="contact-item" data-tracking-name="contact_email_info" data-tracking-type="info_card">
           <div class="contact-logo"><i class="fas fa-envelope"></i></div>
           <h3>Email</h3>
           <div>denis_chi_yiu@hotmail.com</div>
         </div>
-        <div class="contact-item">
+        <div class="contact-item" data-tracking-name="contact_phone_info" data-tracking-type="info_card">
           <div class="contact-logo"><i class="fas fa-mobile"></i></div>
           <h3>Phone</h3>
           <div>0404440737</div>
         </div>
-        <div class="contact-item">
+        <div class="contact-item" data-tracking-name="contact_location_info" data-tracking-type="info_card">
           <div class="contact-logo"><i class="fas fa-map"></i></div>
           <h3>Location</h3>
           <div>Australia, Sydney</div>
@@ -264,13 +271,13 @@
     </div>
   </section>
 
-  <section id="footer">
+  <section id="footer" data-tracking-group="footer">
     <div class="container">
       <div>Denis Ng</div>
       <p>Copyright © 2025 All rights reserved </p>
     </div>
   </section>
-  <button id="contact-me-icon">
+  <button id="contact-me-icon" data-tracking-name="floating_contact_button" data-tracking-type="button">
     <i class="fa fa-phone"></i>
   </button>
   <script src="./app.js"></script>
